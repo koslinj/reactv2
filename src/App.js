@@ -7,8 +7,7 @@ class App extends Component {
     this.state = {
       newItem: "",
       list: [],
-      active: false,
-      deleting: false
+      active: false
     }
   }
   changeState(text) {
@@ -78,7 +77,7 @@ class App extends Component {
           <ul>
             {this.state.list.map(item => {
               return (
-                <li style={this.state.deleting === false ? { opacity: '1' } : { opacity: '0' }} key={item.id}>
+                <li key={item.id}>
                   <div className="timeInfo">
                     {item.date}
                   </div>
